@@ -12,6 +12,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * We also added a spring-boot-dev-tools-dependency so that we don't need to manually re-deploy the application every time we make changes to the application
  * 		**Don't forget to add jasper to complie JSP files**
  */
+
+
+/*
+ * In controller class we are going to use Servlet objects of type (HttpServeletResponse and HttpServletRequest)
+ * 		** SPRING MVC INTERNALLY USES SERVLET
+ * 		** JSP's ALSO GET CONVERTED INTO SERVLETS INTERNALLY
+ */
+
 @SpringBootApplication
 public class SpringWebMvcLauncher3Application {
 
