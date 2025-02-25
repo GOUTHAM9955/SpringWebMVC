@@ -19,7 +19,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 /*
- *  
+ * Check FirstController class:
+ * 	1) Implemented non-invasive controller passing Map as argument 
+ *  2) Checked how we can have mapping without return type
+ */
+
+/*
+ * We can add context path using application.properties file check it 
+ * 		It is mandatory to have it as multiple application running on a server can have similar end points
+ * 
  */
 
 @SpringBootApplication
