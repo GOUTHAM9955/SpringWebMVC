@@ -65,6 +65,49 @@ spring.mvc.prefix=.jsp    to let it know that the file of type jsp
 </dependency>
  */
 
+
+/*
+ *  Main HTTP requests 
+ *  	1) GET : For client to request data form server
+ *  			 No request body
+ *  			 Data sent via URL parameters
+ *  	2) POST :  Send data to the server to create or update resources.
+ *  			   Request body contains data 
+ *  			  Not Idempotent: repeated requests can create multiple resources
+ *  	3) PUT :
+ *  			Update an existing resource or create it if it doesn’t exist
+ *  			Request body contains the entire resource
+ *  			Idempotent (repeated requests yield the same result)
+ *  			
+ *  	4) DELETE :
+ *  			Remove a resource from the server.
+ *  			Usually no request body.
+ *  			Idempotent (repeated requests yield the same result).
+ *  	
+ *  	5) PATCH
+ *  		Partially update an existing resource.
+ *  		Only sends the modified fields.
+ *  
+ *  	6) OPTIONS
+ *  		The OPTIONS method is used to describe the communication options for the target resource. 
+ *  		It lets the client know which HTTP methods and other capabilities are supported by the server for a specific URL.
+ *			Purpose: Describe communication options for the target resource.
+ *			Use Case: CORS (Cross-Origin Resource Sharing) preflight checks.
+ *
+ *		7) HEAD
+ *			Purpose: Same as GET but only retrieves headers (no body).
+ *			Use Case: Checking resource existence or last modification date.
+ *  		
+ */
+
+/*
+ * From Spring 4 
+ * 	We have @GetMapping, @PostMapping, @PutMapping, @DeleteMapping
+ * 	Instead of specifying in RequestMapper whose syntax is => @RequstMapping(value="",method =RequestMethod.GET/PUT/POST...)
+ * 
+ * We used @GetMapping in one of our methods in controller 
+ */
+
 package com.springWebMVC.lauch.SpringWebMVCLauncher1;
 
 import org.springframework.boot.SpringApplication;
